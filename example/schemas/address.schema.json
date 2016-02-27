@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://api.example.com/v1/schemas/address",
+  "required": ["streetName"],
+  "properties": {
+    "streetName": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    }
+  }
+}

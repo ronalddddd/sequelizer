@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://api.example.com/v1/schemas/user",
+  "properties": {
+    "active": {
+      "type": "boolean"
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "username": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "password": {
+      "description": "Sets a new password, this is not retrievable.",
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "role": {
+      "type": "string",
+      "enum": [ "admin", "staff", "guest" ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "homeAddress": { "$ref": "http://api.example.com/v1/schemas/address" },
+    "billingAddress": { "$ref": "http://api.example.com/v1/schemas/address" }
+  }
+}

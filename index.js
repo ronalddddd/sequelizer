@@ -4,7 +4,7 @@ const JsonSchemaDefinition = require('./lib/JsonSchemaDefinition');
 /**
  * Transform foreign schema definitions to Sequelize model definitions
  */
-class Modelize {
+class Sequelizer {
   /**
    * Convert a JSON schema into a Sequelize model definition
    * http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition
@@ -27,4 +27,4 @@ class Modelize {
   }
 }
 
-module.exports = Modelize;
+module.exports = Sequelizer;

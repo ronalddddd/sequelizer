@@ -1,7 +1,7 @@
 {
-  "name": "modelize",
+  "name": "sequelizer",
   "version": "1.0.0",
-  "description": "Convert JsonSchemas into Sequelize Models",
+  "description": "Convert foreign schemas into Sequelize model definitions",
   "main": "index.js",
   "scripts": {
     "test": "mocha",

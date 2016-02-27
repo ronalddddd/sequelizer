@@ -1,14 +1,14 @@
-<a name="Modelize"></a>
-## Modelize
+<a name="Sequelizer"></a>
+## Sequelizer
 Transform foreign schema definitions to Sequelize model definitions
 
 **Kind**: global class  
-<a name="Modelize.fromJsonSchema"></a>
-### Modelize.fromJsonSchema(schemas, schemaId, options) ⇒ <code>Object</code>
+<a name="Sequelizer.fromJsonSchema"></a>
+### Sequelizer.fromJsonSchema(schemas, schemaId, options) ⇒ <code>Object</code>
 Convert a JSON schema into a Sequelize model definition
 http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition
 
-**Kind**: static method of <code>[Modelize](#Modelize)</code>  
+**Kind**: static method of <code>[Sequelizer](#Sequelizer)</code>  
 **Returns**: <code>Object</code> - The model definition to use with `sequelize.define()`.  
 
 | Param | Type | Description |

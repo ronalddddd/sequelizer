@@ -1,13 +1,13 @@
 'use strict';
 
-const Modelize = require('../index');
+const Sequelizer = require('../index');
 const Sequelize = require('sequelize');
 const jsonSchemas = [
   require('./schemas/address.schema.json'),
   require('./schemas/user.schema.json'),
 ];
 
-const definition = Modelize.fromJsonSchema(jsonSchemas, 'http://api.example.com/v1/schemas/user', {
+const definition = Sequelizer.fromJsonSchema(jsonSchemas, 'http://api.example.com/v1/schemas/user', {
   uniqueFields: ['username'],
   mixinFields: ['homeAddress', 'billingAddress'],
   customFieldDefinitions: {

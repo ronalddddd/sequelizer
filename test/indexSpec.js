@@ -3,15 +3,15 @@
 /*eslint-disable guard-for-in */
 'use strict';
 const expect = require('chai').expect;
-const Modelize = require('../index');
+const Sequelizer = require('../index');
 const Sequelize = require('sequelize');
 const jsonSchemas = [
   require('../example/schemas/user.schema.json'),
   require('../example/schemas/address.schema.json'),
 ];
-describe('Modelize', () => {
+describe('Sequelizer', () => {
   describe('fromJsonSchema()', () => {
-    const definition = Modelize.fromJsonSchema(jsonSchemas, 'http://api.example.com/v1/schemas/user', {
+    const definition = Sequelizer.fromJsonSchema(jsonSchemas, 'http://api.example.com/v1/schemas/user', {
       uniqueFields: ['username'],
       mixinFields: ['homeAddress', 'billingAddress'],
       customFieldDefinitions: {

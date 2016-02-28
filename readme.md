@@ -1,12 +1,14 @@
 <a name="Sequelizer"></a>
 ## Sequelizer
 Transform foreign schema definitions to Sequelize model definitions
+[![Build Status](https://travis-ci.org/ronalddddd/sequelizer.svg?branch=master)](https://travis-ci.org/ronalddddd/sequelizer)
 
 **Kind**: global class  
 <a name="Sequelizer.fromJsonSchema"></a>
 ### Sequelizer.fromJsonSchema(schemas, schemaId, options) ⇒ <code>Object</code>
-Convert a JSON schema into a Sequelize model definition
-http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition
+Convert a JSON schema into a Sequelize [model definition](http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition)
+
+See [example/fromJsonSchema.js](example/fromJsonSchema.js) for example usage.
 
 **Kind**: static method of <code>[Sequelizer](#Sequelizer)</code>  
 **Returns**: <code>Object</code> - The model definition to use with `sequelize.define()`.  

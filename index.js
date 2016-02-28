@@ -3,11 +3,14 @@ const JsonSchemaDefinition = require('./lib/JsonSchemaDefinition');
 
 /**
  * Transform foreign schema definitions to Sequelize model definitions
+ * [![Build Status](https://travis-ci.org/ronalddddd/sequelizer.svg?branch=master)](https://travis-ci.org/ronalddddd/sequelizer)
  */
 class Sequelizer {
   /**
-   * Convert a JSON schema into a Sequelize model definition
-   * http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition
+   * Convert a JSON schema into a Sequelize [model definition](http://docs.sequelizejs.com/en/latest/docs/models-definition/#definition)
+   *
+   * See [example/fromJsonSchema.js](example/fromJsonSchema.js) for example usage.
+   *
    * @param schemas {Object|Array} A list of json schemas or a single Json schema object.
    * @param schemaId {string|null} The schema id to build the model definition from.
    * @param options

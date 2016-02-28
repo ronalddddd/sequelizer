@@ -24,3 +24,4 @@ const definition = Sequelizer.fromJsonSchema(jsonSchemas, 'http://api.example.co
 });
 
 console.log(definition);
+// Now you can do sequelize.define('User', definition, ...);

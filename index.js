@@ -2,8 +2,9 @@
 const JsonSchemaDefinition = require('./lib/JsonSchemaDefinition');
 
 /**
- * Transform foreign schema definitions to Sequelize model definitions
  * [![Build Status](https://travis-ci.org/ronalddddd/sequelizer.svg?branch=master)](https://travis-ci.org/ronalddddd/sequelizer)
+ *
+ * Transform foreign schema definitions to Sequelize model definitions
  */
 class Sequelizer {
   /**

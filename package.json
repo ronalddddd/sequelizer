@@ -1,6 +1,6 @@
 {
   "name": "sequelizer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert foreign schemas into Sequelize model definitions",
   "main": "index.js",
   "scripts": {

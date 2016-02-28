@@ -1,7 +1,8 @@
 <a name="Sequelizer"></a>
 ## Sequelizer
-Transform foreign schema definitions to Sequelize model definitions
 [![Build Status](https://travis-ci.org/ronalddddd/sequelizer.svg?branch=master)](https://travis-ci.org/ronalddddd/sequelizer)
+
+Transform foreign schema definitions to Sequelize model definitions
 
 **Kind**: global class  
 <a name="Sequelizer.fromJsonSchema"></a>

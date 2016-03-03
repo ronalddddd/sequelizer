@@ -12,7 +12,8 @@ const jsonSchemas = [
 describe('Sequelizer', () => {
   describe('fromJsonSchema()', () => {
     const definition = Sequelizer.fromJsonSchema(jsonSchemas, 'http://api.example.com/v1/schemas/user', {
-      uniqueFields: ['username'],
+      uniqueFields: ['username', 'email'],
+      notNullFields: ['username', 'email', 'active'],
       mixinFields: ['homeAddress', 'billingAddress'],
       customFieldDefinitions: {
         passwordHash: {
@@ -49,7 +50,7 @@ describe('Sequelizer', () => {
       expect(definition.password.type.key).to.equal('VIRTUAL');
       expect(definition.passwordHash.type.key).to.equal('TEXT');
       expect(definition.email.type.key).to.equal('TEXT');
-      //expect(definition.role).to.equal( ??? );
+      expect(definition.role.type.values).to.deep.equal(Sequelize.ENUM([ 'admin', 'staff', 'guest' ]).values);
       expect(definition.tags.type.key).to.equal('JSONB');
       expect(definition.homeAddressStreetName.type.key).to.equal('TEXT');
       expect(definition.homeAddressLat.type.key).to.equal('REAL');
@@ -57,6 +58,20 @@ describe('Sequelizer', () => {
       expect(definition.billingAddressStreetName.type.key).to.equal('TEXT');
       expect(definition.billingAddressLat.type.key).to.equal('REAL');
       expect(definition.billingAddressLng.type.key).to.equal('REAL');
+      done();
+    });
+
+    it('should have the proper unique fields', (done) => {
+      expect(definition.active.unique).to.exist.and.equal(false);
+      expect(definition.username.unique).to.exist.and.equal(true);
+      expect(definition.email.unique).to.exist.and.equal(true);
+      done();
+    });
+
+    it('should have the proper allowNull fields', (done) => {
+      expect(definition.active.allowNull).to.exist.and.equal(false);
+      expect(definition.username.allowNull).to.exist.and.equal(false);
+      expect(definition.email.allowNull).to.exist.and.equal(false);
       done();
     });
 

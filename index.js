@@ -15,7 +15,8 @@ class Sequelizer {
    * @param schemas {Object|Array} A list of json schemas or a single Json schema object.
    * @param schemaId {string|null} The schema id to build the model definition from.
    * @param options
-   * @param options.uniqueFields {Array} a list of fields that have the unique constraint
+   * @param options.uniqueFields {Array} a list of fields that have the UNIQUE constraint
+   * @param options.notNullFields {Array} a list of fields that have the NOT NULL constraint
    * @param options.mixinFields {Array} a list of properties that are sub-schemas (`object` or `$ref` types) to "flatten" into the model definition.
    * For example, the schema property `"address": { "$ref": "http://example.com/schemas/address" }`
    * will create "address" prefixed fields from the address sub-schema,
